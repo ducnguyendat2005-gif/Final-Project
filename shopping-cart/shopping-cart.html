@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1f2937;
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-item {
+            padding: 15px 0;
+            font-size: 14px;
+            color: #6b7280;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            margin-bottom: -2px;
+        }
+
+        .nav-item.active {
+            color: #2563eb;
+            border-bottom-color: #2563eb;
+        }
+
+        .cart-info {
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 30px;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 40px;
+        }
+
+        .cart-items {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .cart-item {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+        }
+
+        .item-image {
+            width: 140px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 6px;
+            flex-shrink: 0;
+        }
+
+        .item-details {
+            flex: 1;
+        }
+
+        .item-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 8px;
+        }
+
+        .item-author {
+            font-size: 13px;
+            color: #6b7280;
+            margin-bottom: 8px;
+        }
+
+        .item-rating {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .rating-number {
+            color: #f59e0b;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .stars {
+            color: #f59e0b;
+            font-size: 14px;
+        }
+
+        .rating-count {
+            color: #6b7280;
+            font-size: 13px;
+        }
+
+        .item-info {
+            font-size: 13px;
+            color: #6b7280;
+            margin-bottom: 10px;
+        }
+
+        .item-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .action-link {
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .save {
+            color: #2563eb;
+        }
+
+        .remove {
+            color: #dc2626;
+        }
+
+        .item-price {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1f2937;
+        }
+
+        .order-details {
+            background-color: #f9fafb;
+            padding: 25px;
+            border-radius: 8px;
+            height: fit-content;
+            position: sticky;
+            top: 20px;
+        }
+
+        .order-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 20px;
+        }
+
+        .order-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .order-label {
+            color: #6b7280;
+        }
+
+        .order-value {
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        .order-total {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 15px;
+            margin-top: 15px;
+            border-top: 2px solid #e5e7eb;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .checkout-btn {
+            width: 100%;
+            background-color: #1f2937;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 6px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 20px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .checkout-btn:hover {
+            background-color: #374151;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+
+            .cart-item {
+                flex-direction: column;
+            }
+
+            .item-image {
+                width: 100%;
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Shopping Cart</h1>
+            <nav class="nav">
+                <div class="nav-item">Categories</div>
+                <div class="nav-item">Details</div>
+                <div class="nav-item active">Shopping Cart</div>
+            </nav>
+        </div>
+
+        <div class="cart-info">1 Course in cart</div>
+
+        <div class="main-content">
+            <div class="cart-items">
+                <div class="cart-item">
+                    <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=280&h=200&fit=crop" alt="Course thumbnail" class="item-image">
+                    <div class="item-details">
+                        <div class="item-title">Introduction to User Experience Design</div>
+                        <div class="item-author">By John Doe</div>
+                        <div class="item-rating">
+                            <span class="rating-number">4.6</span>
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(250 rating)</span>
+                        </div>
+                        <div class="item-info">22 Total Hours. 155 Lectures. All levels</div>
+                        <div class="item-actions">
+                            <span class="action-link save">Save for later</span>
+                            <span class="action-link remove">Remove</span>
+                        </div>
+                    </div>
+                    <div class="item-price">$45.00</div>
+                </div>
+
+                <div class="cart-item">
+                    <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=280&h=200&fit=crop" alt="Course thumbnail" class="item-image">
+                    <div class="item-details">
+                        <div class="item-title">Introduction to User Experience Design</div>
+                        <div class="item-author">By John Doe</div>
+                        <div class="item-rating">
+                            <span class="rating-number">4.6</span>
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(250 rating)</span>
+                        </div>
+                        <div class="item-info">22 Total Hours. 155 Lectures. All levels</div>
+                        <div class="item-actions">
+                            <span class="action-link save">Save for later</span>
+                            <span class="action-link remove">Remove</span>
+                        </div>
+                    </div>
+                    <div class="item-price">$45.00</div>
+                </div>
+
+                <div class="cart-item">
+                    <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=280&h=200&fit=crop" alt="Course thumbnail" class="item-image">
+                    <div class="item-details">
+                        <div class="item-title">Introduction to User Experience Design</div>
+                        <div class="item-author">By John Doe</div>
+                        <div class="item-rating">
+                            <span class="rating-number">4.6</span>
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(250 rating)</span>
+                        </div>
+                        <div class="item-info">22 Total Hours. 155 Lectures. All levels</div>
+                        <div class="item-actions">
+                            <span class="action-link save">Save for later</span>
+                            <span class="action-link remove">Remove</span>
+                        </div>
+                    </div>
+                    <div class="item-price">$45.00</div>
+                </div>
+            </div>
+
+            <div class="order-details">
+                <h2 class="order-title">Order Details</h2>
+                <div class="order-row">
+                    <span class="order-label">Price</span>
+                    <span class="order-value">$300.00</span>
+                </div>
+                <div class="order-row">
+                    <span class="order-label">Discount</span>
+                    <span class="order-value">-$10.00</span>
+                </div>
+                <div class="order-row">
+                    <span class="order-label">Tax</span>
+                    <span class="order-value">$20.00</span>
+                </div>
+                <div class="order-total">
+                    <span>Total</span>
+                    <span>$290.00</span>
+                </div>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

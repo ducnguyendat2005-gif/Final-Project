@@ -1,0 +1,608 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inter;
+  
+}
+/*copy phần header ở đây*/
+header{
+    width:100%;
+    height:75px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom:1px solid #E2E8F0;
+}
+.head-start{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:30px;
+    
+}
+.logo{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: inter;
+    font-weight: 500;
+    font-size:16px;
+}
+.logo > img{
+    width:31px;
+    height:40px;
+}
+.head-start > p:nth-of-type(1){  /*p:nth-of-type : đếm thẻ con trực tiếp không can thiệp vào thẻ con của thẻ con khác khác */
+    font-size:15px;
+    font-weight: 250;
+}
+.search-container {
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.search-icon {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    color: #666;
+    pointer-events: none;
+}
+
+.search-box {
+    width: 650px; 
+    padding: 12px 20px 12px 50px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-box:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+.search-box::placeholder {
+    color: #999;
+}
+.head-start > p:nth-of-type(2){
+    font-size:15px;
+    font-weight: 250;
+}
+.func-bar{
+    display:flex;
+    align-items: center;
+    gap:25px;
+    margin-right:-75px;
+}
+.inter-icon{
+    display:flex;
+    margin-top: 5px;
+    gap:20px;
+}
+.ava{
+    background-color:#334155;
+    width:40px;
+    height:40px;
+    border-radius: 50px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.ava > p{
+    color:white;
+    font-size:16px;
+    font-weight: 500;
+}
+/*end of copying header*/
+.main-page{
+    height:690px;
+    margin-top:40px;
+    padding-left:45px;
+    display:grid;
+    grid-template-columns:1fr 0.7fr ;
+    grid-template-rows:35px 1fr;
+    grid-template-areas:
+    "TITLE TITLE"
+    "LEFTCH RIGHTCO"
+    ;
+    gap:40px;
+}
+.title{grid-area:TITLE}
+.left-checkout {grid-area:LEFTCH;}
+.right-confirm{grid-area:RIGHTCO}
+.title{
+    padding-left:20px;
+    display:flex;
+    gap:10px;
+    align-items: flex-end;
+}
+.title > img {
+    width:6px;
+    height:10px;
+}
+.title > p:nth-of-type(1){
+    font-weight:600;
+    font-size:24px;
+    margin-right:10px;
+
+}
+.left-checkout{
+    width:700px;
+    height:auto;
+}
+.ck-box{
+    width:900px;
+    height:576px;
+    padding:20px;
+    border:2px solid #E2E8F0;
+    border-radius:16px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:20px 50px 35px 1fr 70px;
+    grid-template-areas: 
+    "CT TT"
+    "CI TI"
+    "PT PT"
+    "PB PB"
+    "PP PP";
+    gap:10px;
+    justify-items: center;
+    
+}
+#country-title {grid-area: CT;}
+.country-input {grid-area: CI;}
+#terry-title {grid-area: TT;}
+.terry-input {grid-area: TI;}
+#paybox-title {grid-area: PT;}
+.paybox {grid-area: PB;}
+.paypal-box {grid-area: PP;}
+
+#country-title,#terry-title,#paybox-title{
+    align-self: flex-end;
+    justify-self: start;
+}
+.country-input,.terry-input {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 14px;
+    color: #333;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.country-input::placeholder,.terry-input::placeholder {
+    color: #999;
+}
+
+.country-input:focus,.terry-input:focus {
+    border-color: #4a90e2;
+}
+
+.country-input:hover,.terry-input:hover {
+    border-color: #b0b0b0;
+}
+.paybox{
+    width:100%;
+    height:300px;
+    border-radius: 10px;
+    padding:5px 15px 15px 15px;
+    background-color:#F8FAFC;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:45px 1fr 1fr 1fr ;
+    grid-template-areas: 
+    "Ctitle visa"
+    "NoC NoC"
+    "cnum cnum"
+    "ED CVC";
+    gap:10px;
+}
+#paybox-title{
+    padding-top:10px;
+}
+.cd-title {grid-area: Ctitle;}
+#visa{grid-area:visa;}
+.NoC {grid-area: NoC;}
+.cnum {grid-area: cnum;}
+.ED {grid-area: ED;}
+.CVC {grid-area: CVC;}
+
+.cd-title{
+    align-self: center;
+    display:flex;
+    font-size:18px;
+    font-weight: 600;
+    gap:10px;
+}
+#visa{
+    align-self: center;
+    justify-self: end;
+}
+.cd-button{
+    margin-top:1.5px;
+}
+.cd-button input {
+  display: none;
+}
+.NoC,.cnum,.ED,.CVC{
+    display:flex;
+    flex-direction: column;
+    gap:5px;
+}
+.NoC > p,.cnum > p,.ED > p,.CVC > p{
+    font-weight: 200;
+    font-size:15px;
+}
+
+/* Vòng tròn ngoài */
+.cd-button span {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 3px solid #9fb2c9; /* màu viền giống nút 2 */
+  display: inline-block;
+  position: relative;
+  transition: 0.2s;
+}
+
+/* Tâm xanh */
+.cd-button span::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #1e7bff; /* tâm xanh đậm */
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 0.2s;
+}
+
+/* Khi được chọn */
+.cd-button input:checked + span::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+.cd-input,
+.cnum-input,
+.ED-input,
+.CVC-input {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 14px;
+    color: #333;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.cd-input::placeholder,
+.cnum-input::placeholder,
+.ED-input::placeholder,
+.CVC-input::placeholder {
+    color: #999;
+}
+
+.cd-input:focus,
+.cnum-input:focus,
+.ED-input:focus,
+.CVC-input:focus {
+    border-color: #4a90e2;
+}
+
+.cd-input:hover,
+.cnum-input:hover,
+.ED-input:hover,
+.CVC-input:hover {
+    border-color: #b0b0b0;
+}
+
+.paypal-box{
+    width:100%;
+    height:65px;
+    border-radius:10px;
+    background-color:#F8FAFC;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "pp paypal";
+}
+.pp-title{grid-area: pp;}
+#paypal{grid-area:paypal;}
+
+.pp-title{
+    display:flex;
+    gap:10px;
+    padding-left:15px;
+    align-self: center;
+}
+.pp-title > p{
+    font-size:18px;
+    font-weight: 600;
+}
+#paypal{
+    justify-self: end;
+    align-self: center;
+    padding-right:15px;
+}
+.right-confirm{
+    width:499px;
+    padding:0px 10px 10px 10px;
+}
+.right-confirm > p{
+    padding-bottom:8px;
+    font-weight:600;
+    font-size:20px;
+}
+.order-info{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    gap:10px;
+}
+.order{
+    background-color: #F8FAFC;
+    padding:15px;
+    width:100%;
+    border:1px solid #E2E8F0;
+    border-radius:8px;
+    display:grid;
+    grid-template-columns: 150px 300px ;
+    grid-template-rows:25px 58px 30px 17px ;
+    grid-template-areas:
+    "img BT"
+    "img CN"
+    "img DES"
+    "img PRICE"
+}
+#purchaser {grid-area: img;}
+#blue-title{grid-area:BT;}
+#course-name{grid-area:CN;}
+#description{grid-area:DES;}
+#price{grid-area:PRICE;}
+#blue-title{
+    font-size:14px;
+    font-weight: 400;
+    color:blue
+}
+#course-name{
+    font-size:20px;
+    font-weight:700;
+}
+#description{
+    font-size:14px;
+    font-weight: 300;
+}
+#price{
+    font-size:18px;
+    font-weight:600;
+}
+.coupon{
+    width:100%;
+    height:48px;
+    background-color: #F8FAFC;
+    display:flex;
+    align-items: center;
+    gap:10px;
+    padding-left:15px;
+    border:1px solid #E2E8F0;
+    border-radius:8px;
+}
+.coupon > img{
+    width:24px;
+    height:24px;
+}
+.coupon > p {
+    font-weight:200;
+}
+.price{
+    width:100%;
+    height:195px;
+    background-color: #F8FAFC;
+    border:1px solid #E2E8F0;
+    border-radius:8px;
+    padding:5px 15px 0px 15px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:40px 40px 40px 5px 63px;
+    grid-template-areas:
+    "BP PN"
+    "DS DN"
+    "TAX TAXN"
+    "suml suml"
+    "TOT TOTN";
+    align-items: center;
+}
+.base-price{grid-area:BP;}
+#price-num{grid-area:PN;}
+.discount{grid-area:DS;}
+#discount-num{grid-area:DN;}
+.tax{grid-area:TAX;}
+#tax-num{grid-area:TAXN;}
+#sum-line{grid-area:suml;}
+.total{grid-area:TOT;}
+#total-num{grid-area:TOTN;}
+#sum-line{
+    background-color: black;
+    width:100%;
+    height:0.5px;
+}
+#price-num,#discount-num,#tax-num,#total-num{
+    justify-self: end;
+    font-weight:600;
+    font-size:18px
+}
+#total-num{
+    font-weight:700;
+    font-size:20px;
+}
+.submit-button {
+  width: 100%;
+  height: 48px;
+
+  background: linear-gradient(
+    180deg,
+    #0b1220 0%,
+    #020617 100%
+  );
+
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+
+  border: none;
+  border-radius: 10px;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover */
+.submit-button:hover {
+  background: linear-gradient(
+    180deg,
+    #111827 0%,
+    #020617 100%
+  );
+}
+
+/* Active (khi bấm) */
+.submit-button:active {
+  transform: scale(0.98);
+}
+
+/* Disabled (nếu cần) */
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+/*copy phần footer từ đây*/
+footer{
+    width:100%;
+    height:350px;
+    background-color:#1E293B;
+    position:relative;
+    margin-top:70px;
+}
+.footer-info{
+    padding:80px;
+    display:grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 2.2fr 0.8fr 0.8fr 1.5fr;
+    gap:80px;
+    color:white;
+}
+.footer-intro{
+    display:flex;
+    flex-direction: column;
+    gap:0px;
+}
+.footer-logo{
+    display:flex;
+    align-items:center;
+    font-weight: 400;
+    font-size: 20px;
+    gap:6px;
+}
+.footer-intro > p:nth-of-type(1){
+    font-weight:200;
+    font-size:14px;
+    padding-top:15px;
+}
+.footer-intro > p:nth-of-type(2){
+    font-weight:200;
+    font-size:14px;
+    padding-top:4px;
+}
+.upper-p{
+    display: inline-block;
+    padding-bottom:4px;
+}
+.get-help{
+    display:flex;
+    flex-direction: column;
+    gap:15px;
+}
+.get-help> p:nth-child(1){
+    font-size:20px;
+    font-weight: 600;
+}
+.get-help> p:nth-child(2),.get-help> p:nth-child(3),.get-help> p:nth-child(4){
+    font-size:14px;
+    font-weight:200;
+}
+.get-help> p:nth-child(2){
+    margin-top:3px;
+}
+.programs{
+    display:flex;
+    flex-direction: column;
+    gap:15px;
+}
+.programs > p:nth-child(1){
+    font-size:20px;
+    font-weight: 600;
+}
+.programs > p:nth-child(2){
+    margin-top:3px;
+}
+.programs > p:nth-child(2),.programs > p:nth-child(3),.programs > p:nth-child(4),.programs > p:nth-child(5),.programs > p:nth-child(6){
+    font-size:14px;
+    font-weight:200;
+}
+.contact{
+    display:flex;
+    flex-direction: column;
+    gap:18px;
+}
+.contact-us{
+    display:flex;
+    flex-direction: column;
+    gap:7px;
+    font-weight:200;
+    font-size:14px;
+}
+.contact-us > p:nth-child(1){
+    font-weight:700;
+    font-size:20px;
+    padding-bottom:10px;
+}
+.partner-button{
+    display:flex;
+    gap:10px;
+}
+.icon-btn {
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+
+    text-decoration: none;
+}
+
+.icon-btn img {
+  width: 20px;
+  height: 20px;
+}
+/*end of footer*/

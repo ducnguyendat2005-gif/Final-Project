@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check out Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+        <div class="head-start">
+            <div class="logo">
+                <img src="./logo (1).png">
+                <span>Byway</span>
+            </div>
+            <p>Categories</p>
+            <div class="search-container">
+                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/>
+                    <path d="m21 21-4.35-4.35"/>
+                </svg>
+                <input type="text" class="search-box" placeholder="Search courses">
+            </div>
+            <p>Teach on Byway</p>
+        </div>
+        <div class="func-bar">
+            <div class="inter-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                </svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="9" cy="21" r="1"/>
+                    <circle cx="20" cy="21" r="1"/>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                </svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                    <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                </svg>
+            </div>
+            <div class="ava">
+                <p>J</p>
+            </div>
+        </div>
+    </header>
+  <div class="main-page">
+  <div class="title">
+            <p>Checkout Page</p>
+            <p>Details</p>
+            <img src="./Vector.png">
+            <p>Shopping Cart</p>
+            <img src="./Vector.png">
+            <p>Checkout</p>
+          </div>
+          <div class="ck-box">
+            <p id="country-title">Country</p>
+            <input type="text" class="country-input" placeholder="Enter Country">
+            <p id="terry-title">State/Union Territory</p>
+            <input type="text" class="terry-input" placeholder="Enter State">
+            <p id="paybox-title">Payment Method</p>
+            <div class="paybox">
+              <div class="cd-title">  
+                <label class="cd-button">
+                  <input type="radio" name="choice">
+                  <span></span>
+                </label>
+                <p>Credit/Debit Card</p>
+              </div>
+              <img id="visa" src="./image 17.png">
+              <div class="NoC">
+                <p>Name of Card</p>
+                <input type="text" class="cd-input" placeholder="Name of Card">
+              </div>
+              <div class="cnum">
+                <p>Card Number</p>
+                <input type="text" class="cnum-input" placeholder="Card Number">
+              </div>
+              
+              <div class="ED">
+                  <p>Expired Date</p>
+                  <input type="text" class="ED-input" placeholder="Enter Date">
+              </div>
+              <div class="CVC">
+                  <p>CVC/CVV</p>
+                  <input type="text" class="CVC-input" placeholder="Enter CVC/CVV">
+              </div>
+              
+            </div>
+            <div class="paypal-box">
+              <div class="pp-title">
+                <label class="cd-button">
+                <input type="radio" name="choice">
+               <span></span>
+                </label>
+              <p>PayPal</p>
+                </div>
+                <img id="paypal" src="./image 16.png">
+            </div>
+          </div>
+       
+      <div class="right-confirm">
+        <p>Order Details</p>
+        <div class="order-info">
+        <div class="order">
+          <img id="purchaser" src="./Rectangle 1133.png">
+          <p id="blue-title">Design</p>
+          <p id="course-name">Introduction to User Experience Design</p>
+          <p id="description">155 Lectures . 22 Total Hours</p>
+          <p id="price">$45.00</p>
+        </div>
+        <div class="coupon">
+          <img src="./percent-03.png">
+          <p>APPLY COUPON CODE</p>
+        </div>
+        <div class="price">
+          <div class="base-price">Price</div>
+          <div id="price-num">$300.00</div>
+          <div class="discount">Discount</div>
+          <div id="discount-num">-$10.00</div>
+          <div class="tax">Tax</div>
+          <div id="tax-num">$20.00</div>
+          <div id="sum-line"></div>
+          <div class="total">Total</div>
+          <div id="total-num">$290.00</div>
+        </div>
+        <button class="submit-button">
+          Proceed to Checkout
+        </button>
+      </div>
+      </div>
+    </div>
+    <footer>
+        <div class="footer-info">
+            <div class="footer-intro">
+                <div class="footer-logo">
+                    <img src="./logo (1).png" alt="Byway Logo" style="width: 31px; height: 40px;">
+                    <span>Byway</span>
+                </div>
+                <p>Empowering learners through accessible and engaging online education.</p>
+                <p>Byway is a leading online learning platform dedicated to providing high-quality, flexible, and affordable educational experiences.</p>
+            </div>
+            
+            <div class="get-help">
+                <p class="upper-p">Get Help</p>
+                <p>Contact Us</p>
+                <p>Latest Articles</p>
+                <p>FAQ</p>
+            </div>
+            
+            <div class="programs">
+                <p class="upper-p">Programs</p>
+                <p>Art & Design</p>
+                <p>Business</p>
+                <p>IT & Software</p>
+                <p>Languages</p>
+                <p>Programming</p>
+            </div>
+            
+            <div class="contact">
+                <div class="contact-us">
+                    <p class="upper-p">Contact Us</p>
+                    <p>Address: 123 Main Street, Anytown, CA 12345</p>
+                    <p>Tel: +(123) 456-7890</p>
+                    <p>Mail: bywayellu@webkul.in</p>
+                </div>
+                <div class="partner-button">
+                    <a href="#" class="icon-btn">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+                    </a>
+                    <a href="#" class="icon-btn">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter">
+                    </a>
+                    <a href="#" class="icon-btn">
+                        <img src="https://cdn-icons-png.flaticon.com/512/300/300221.png" alt="Google">
+                    </a>
+                    <a href="#" class="icon-btn">
+                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968958.png" alt="X">
+                    </a>
+                    <a href="#" class="icon-btn">
+                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Microsoft">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

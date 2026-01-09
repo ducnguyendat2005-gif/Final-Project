@@ -1,0 +1,19 @@
+*, *::before, *::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+.main-page{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:1fr 1fr 1fr;
+    grid-template-areas:
+    "PS BP"
+    "PS IS"
+    "PS LS";
+    .profile-section{grid-area:PS;}
+    .basic-profile{grid-area:BP;}
+    .image-section{grid-area:IS;}
+    .link-section{grid-area:LS;}
+    
+}

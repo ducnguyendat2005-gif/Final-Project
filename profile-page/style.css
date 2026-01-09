@@ -1,0 +1,24 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "PS BP" "PS IS" "PS LS";
+}
+.main-page .profile-section {
+  grid-area: PS;
+}
+.main-page .basic-profile {
+  grid-area: BP;
+}
+.main-page .image-section {
+  grid-area: IS;
+}
+.main-page .link-section {
+  grid-area: LS;
+}/*# sourceMappingURL=style.css.map */

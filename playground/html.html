@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Accordion Course UI</title>
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #f5f6fa;
+    padding: 40px;
+  }
+
+  /* Card */
+  .course {
+    max-width: 720px;
+    margin: auto;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.08);
+    padding: 20px;
+  }
+
+  /* Header */
+  .course-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .chevron {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+  }
+
+  .title {
+    font-weight: 600;
+    font-size: 18px;
+    flex: 1;
+  }
+
+  .meta {
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    color: #666;
+    white-space: nowrap;
+  }
+
+  /* Body (accordion content) */
+  .course-body {
+  margin-top: 16px;
+  opacity: 0;
+  transform: translateY(-20px);
+  visibility: hidden;
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+
+  .course.is-open .course-body {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+
+  .course.is-open .chevron {
+    transform: rotate(180deg);
+  }
+
+  /* Lesson items */
+  .lesson {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 16px;
+    border-radius: 10px;
+    background: #f7f7f8;
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+
+  .lesson span {
+    color: #888;
+    font-size: 14px;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="course" id="course">
+  <div class="course-header" id="toggle">
+    <div class="chevron">⌄</div>
+    <div class="title">Introduction to UX Design</div>
+    <div class="meta">
+      <div>📄 5 Lessons</div>
+      <div>⏱ 1 hour</div>
+    </div>
+  </div>
+
+  <div class="course-body">
+    <div class="lesson">What is UX Design? <span>12 min</span></div>
+    <div class="lesson">History of UX <span>10 min</span></div>
+    <div class="lesson">UX vs UI Design <span>15 min</span></div>
+    <div class="lesson">UX Design Process <span>13 min</span></div>
+    <div class="lesson">Career Paths in UX <span>10 min</span></div>
+  </div>
+</div>
+
+<script>
+  const course = document.getElementById("course");
+  const toggle = document.getElementById("toggle");
+
+  toggle.addEventListener("click", () => {
+    course.classList.toggle("is-open");
+  });
+</script>
+
+</body>
+</html>

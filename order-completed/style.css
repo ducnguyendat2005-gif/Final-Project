@@ -1,0 +1,249 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inter;
+}
+/*copy phần header ở đây*/
+header{
+    width:100%;
+    height:75px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom:1px solid #E2E8F0;
+}
+.head-start{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:30px;
+    
+}
+.logo{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: inter;
+    font-weight: 500;
+    font-size:16px;
+}
+.logo > img{
+    width:31px;
+    height:40px;
+}
+.head-start > p:nth-of-type(1){  /*p:nth-of-type : đếm thẻ con trực tiếp không can thiệp vào thẻ con của thẻ con khác khác */
+    font-size:15px;
+    font-weight: 250;
+}
+.search-container {
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.search-icon {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    color: #666;
+    pointer-events: none;
+}
+
+.search-box {
+    width: 650px; 
+    padding: 12px 20px 12px 50px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-box:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+.search-box::placeholder {
+    color: #999;
+}
+.head-start > p:nth-of-type(2){
+    font-size:15px;
+    font-weight: 250;
+}
+.func-bar{
+    display:flex;
+    align-items: center;
+    gap:25px;
+    margin-right:-75px;
+}
+.inter-icon{
+    display:flex;
+    margin-top: 5px;
+    gap:20px;
+}
+.inter-icon{
+    background-color:#334155;
+    width:40px;
+    height:40px;
+    border-radius: 50px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.ava-header-name > p{
+    color:white;
+    font-size:16px;
+    font-weight: 500;
+}
+/*end of copying header*/
+.main-page{
+    width:100%;
+    height:470px;
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: center;
+    justify-content: center;
+}
+.green-n-tick{
+    display:flex;
+}
+.green{
+    background-color:#16A34A;
+    width:200px;
+    height:200px;
+    border-radius: 250px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-page > p:nth-of-type(1){
+    font-weight:700;
+    font-size:40px;
+    margin-top:15px;
+}
+.main-page > p:nth-of-type(2){
+    font-weight:600;
+    font-size:24px;
+    margin-top:6px;
+}
+/*copy phần footer từ đây*/
+footer{
+    width:100%;
+    height:350px;
+    background-color:#1E293B;
+    position:relative;
+    margin-top:70px;
+}
+.footer-info{
+    padding:80px;
+    display:grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 2.2fr 0.8fr 0.8fr 1.5fr;
+    gap:80px;
+    color:white;
+}
+.footer-intro{
+    display:flex;
+    flex-direction: column;
+    gap:0px;
+}
+.footer-logo{
+    display:flex;
+    align-items:center;
+    font-weight: 400;
+    font-size: 20px;
+    gap:6px;
+}
+.footer-intro > p:nth-of-type(1){
+    font-weight:200;
+    font-size:14px;
+    padding-top:15px;
+}
+.footer-intro > p:nth-of-type(2){
+    font-weight:200;
+    font-size:14px;
+    padding-top:4px;
+}
+.upper-p{
+    display: inline-block;
+    padding-bottom:4px;
+}
+.get-help{
+    display:flex;
+    flex-direction: column;
+    gap:15px;
+}
+.get-help> p:nth-child(1){
+    font-size:20px;
+    font-weight: 600;
+}
+.get-help> p:nth-child(2),.get-help> p:nth-child(3),.get-help> p:nth-child(4){
+    font-size:14px;
+    font-weight:200;
+}
+.get-help> p:nth-child(2){
+    margin-top:3px;
+}
+.programs{
+    display:flex;
+    flex-direction: column;
+    gap:15px;
+}
+.programs > p:nth-child(1){
+    font-size:20px;
+    font-weight: 600;
+}
+.programs > p:nth-child(2){
+    margin-top:3px;
+}
+.programs > p:nth-child(2),.programs > p:nth-child(3),.programs > p:nth-child(4),.programs > p:nth-child(5),.programs > p:nth-child(6){
+    font-size:14px;
+    font-weight:200;
+}
+.contact{
+    display:flex;
+    flex-direction: column;
+    gap:18px;
+}
+.contact-us{
+    display:flex;
+    flex-direction: column;
+    gap:7px;
+    font-weight:200;
+    font-size:14px;
+}
+.contact-us > p:nth-child(1){
+    font-weight:700;
+    font-size:20px;
+    padding-bottom:10px;
+}
+.partner-button{
+    display:flex;
+    gap:10px;
+}
+.icon-btn {
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+
+    text-decoration: none;
+}
+
+.icon-btn img {
+  width: 20px;
+  height: 20px;
+}
+/*end of footer*/
