@@ -7,8 +7,9 @@
 
 .main-page{
     display:grid;
+    gap:30px;
     grid-template-columns: 20% 1fr;
-    grid-template-rows:1fr 36% 1fr;
+    grid-template-rows:1fr 36% 1.1fr;
     grid-template-areas:
     "PS BP"
     "PS IS"
@@ -334,6 +335,9 @@
         }
     }
     .link-section{
+        border:1px solid #E5E7EB;
+        border-radius:16px;
+        padding:25px;
         display:grid;
         grid-template-columns: 1fr;
         grid-template-rows:auto 1fr 1fr 1fr 1fr;
@@ -344,6 +348,7 @@
         "ff3"
         "ff4"
         "ff5";
+        gap:10px;
 
         @mixin input-base {
             width: 100%;
@@ -362,12 +367,18 @@
             }
         }
 
-        .link-section > p{grid-area:title;}
+        > p{grid-area:title;}
         .form-field1{grid-area:ff1;}
         .form-field2{grid-area:ff2;}
         .form-field3{grid-area:ff3;}
         .form-field4{grid-area:ff4;}
         .form-field5{grid-area:ff5;}
+
+        > p{
+            font-size:18px;
+            font-weight: 600;
+        }
+
         .link-field1, .link-field2, .link-field3, .link-field4, .link-field5 {
             display: flex;
             flex-direction: column;

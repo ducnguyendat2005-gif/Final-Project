@@ -7,8 +7,9 @@
 
 .main-page {
   display: grid;
+  gap: 30px;
   grid-template-columns: 20% 1fr;
-  grid-template-rows: 1fr 36% 1fr;
+  grid-template-rows: 1fr 36% 1.1fr;
   grid-template-areas: "PS BP" "PS IS" "PS LS";
 }
 .main-page .profile-section {
@@ -342,12 +343,16 @@
   transform: scale(0.97);
 }
 .main-page .link-section {
+  border: 1px solid #E5E7EB;
+  border-radius: 16px;
+  padding: 25px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr 1fr 1fr 1fr;
   grid-template-areas: "title" "ff1" "ff2" "ff3" "ff4" "ff5";
+  gap: 10px;
 }
-.main-page .link-section .link-section > p {
+.main-page .link-section > p {
   grid-area: title;
 }
 .main-page .link-section .form-field1 {
@@ -364,6 +369,10 @@
 }
 .main-page .link-section .form-field5 {
   grid-area: ff5;
+}
+.main-page .link-section > p {
+  font-size: 18px;
+  font-weight: 600;
 }
 .main-page .link-section .link-field1, .main-page .link-section .link-field2, .main-page .link-section .link-field3, .main-page .link-section .link-field4, .main-page .link-section .link-field5 {
   display: flex;
