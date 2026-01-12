@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,6 +17,7 @@
                 <p>John Doe</p>
                 <button>Edit Profile<span><img src="./Icon.png"></span></button>
             </div>
+            <div class="sep-line1"></div>
             <div class="profile-func">
                 <div id="func1">
                     <p>Profile</p>
@@ -32,9 +36,87 @@
                 </div>
             </div>
         </div>
-        <div class="basic-profile"></div>
-        <div class="image-section"></div>
-        <div class="link-section"></div>
+        <div class="basic-profile">
+            <div class="first-name">
+                <p>First Name</p>
+                <div class="form-field1">
+                <input type="text" placeholder="Label">
+                </div>
+            </div>
+            <div class="last-name">
+                <p>Last Name</p>
+                <div class="form-field2">
+                <input type="text" placeholder="Label">
+                </div>
+            </div>
+            <div class="email">
+                <p>Email</p>
+                <div class="form-field3">
+                <input type="text" placeholder="Label">
+                </div>
+            </div>
+            <div class="des">
+                <p>Description</p>
+                <div class="form-field4">
+                <input type="text" placeholder="Label">
+                </div>
+            </div>
+            <div class="lang">
+                <p>Language</p>
+                <div class="form-field5">
+                <input type="text" placeholder="Label">
+                </div>
+            </div>
+        </div>
+        <div class="image-section">
+            <div class="img-up">
+                <p>Image Preview</p>
+                <div class="img-box">
+                    <img src="./Image.png">
+                </div>
+            </div>
+            <div class="add-change-img">
+                <p>Add or Change Image</p>
+                <div class="iac-button">
+                <input type="text" placeholder="Label">
+                </div>
+            </div>
+            <button id="upload-btn">Upload Image</button>
+            <button id="save-btn">Save Changes</button>
+        </div>
+        <div class="link-section">
+            <p>Links</p>
+            <div class="link-field1">
+                <p>Website</p>
+                <div class="lf1-input">
+                <input type="text" placeholder="Label">
+                </div>
+            </div>
+            <div class="link-field2">
+                <p>X/Twitter Profile</p>
+                <div class="lf2-input">
+                <input type="text" placeholder="Label">
+                </div>
+            </div>
+            <div class="link-field3">
+                <p>LinkedIn Profile</p>
+                <div class="lf3-input">
+                <input type="text" placeholder="Label">
+                </div>
+            </div>
+            <div class="link-field4">
+                <p>Facebook Profile</p>
+                <div class="lf4-input">
+                <input type="text" placeholder="Label">
+                </div>
+            </div>
+            <div class="link-field5">
+                <p>Youtube Profile</p>
+                <div class="lf5-input">
+                <input type="text" placeholder="Label">
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
