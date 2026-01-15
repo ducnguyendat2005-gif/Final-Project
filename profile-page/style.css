@@ -6,6 +6,7 @@
 }
 
 .main-page {
+  padding: 50px;
   display: grid;
   gap: 30px;
   grid-template-columns: 20% 1fr;
@@ -27,7 +28,7 @@
 .main-page .profile-section {
   background-color: #F8FAFC;
   width: 100%;
-  height: 43%;
+  height: 40%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -74,6 +75,8 @@
 }
 .main-page .profile-section .profile-func #func1 {
   border-top: 0.5px solid #E2E8F0;
+  background-color: black;
+  color: white;
 }
 .main-page .profile-section .profile-func #func1, .main-page .profile-section .profile-func #func2, .main-page .profile-section .profile-func #func3, .main-page .profile-section .profile-func #func4 {
   height: 54px;

@@ -16,11 +16,11 @@ header{
     border-bottom:1px solid #E2E8F0;
 }
 .head-start{
+    width:70%;
     display:flex;
     justify-content: space-around;
     align-items: center;
-    gap:30px;
-    
+    gap:0px;
 }
 .logo{
     display:flex;
@@ -39,38 +39,50 @@ header{
     font-weight: 250;
 }
 .search-container {
-    position: relative;
-    flex: 0 0 auto;
+  width: 100%;
+  max-width: 600px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 0 14px;
+
+  border: 1px solid #d1d5db; /* viền xám */
+  border-radius: 10px;
+
+  background-color: #fff;
 }
 
-.search-icon {
-    position: absolute;
-    left: 18px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
-    color: #666;
-    pointer-events: none;
+/* icon search */
+.search-container img {
+  width: 16px;
+  height: 16px;
+  opacity: 0.6;
 }
 
+/* input */
 .search-box {
-    width: 650px; 
-    padding: 12px 20px 12px 50px;
-    font-size: 16px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    outline: none;
-    transition: all 0.3s ease;
+  flex: 1;
+  height: 100%;
+
+  border: none;
+  outline: none;
+
+  font-size: 14px;
+  color: #111827;
 }
 
-.search-box:focus {
-    border-color: #4a90e2;
-    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
-}
-
+/* placeholder */
 .search-box::placeholder {
-    color: #999;
+  color: #9ca3af;
+}
+
+/* focus giống UI hiện đại */
+.search-container:focus-within {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
 }
 .head-start > p:nth-of-type(2){
     font-size:15px;
@@ -80,26 +92,17 @@ header{
     display:flex;
     align-items: center;
     gap:25px;
-    margin-right:-75px;
+    margin-right:-21px;
 }
-.inter-icon{
-    display:flex;
-    margin-top: 5px;
-    gap:20px;
-}
-.inter-icon{
-    background-color:#334155;
+.ava{
     width:40px;
     height:40px;
-    border-radius: 50px;
+    color:white;
     display:flex;
     align-items: center;
     justify-content: center;
-}
-.ava-header-name > p{
-    color:white;
-    font-size:16px;
-    font-weight: 500;
+    background-color:#334155;
+    border-radius: 50px;
 }
 /*end of copying header*/
 .main-page{
@@ -113,15 +116,12 @@ header{
     justify-content: center;
 }
 .green-n-tick{
-    display:flex;
-}
-.green{
-    background-color:#16A34A;
     width:200px;
     height:200px;
-    border-radius: 250px;
+    border-radius: 50%;
     display:flex;
-    align-items: center;
+    background-color:#16A34A;
+    align-items:center;
     justify-content: center;
 }
 .main-page > p:nth-of-type(1){
