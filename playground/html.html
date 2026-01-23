@@ -1,74 +1,40 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Counter Number</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f8fafc;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width:100px;
+            height:100px;
+            background-color: aquamarine;
+        }
+        .container {
+            display: grid;
+  grid-auto-flow: column; /* Quan trọng! */
+  grid-auto-columns: 200px; /* Chiều rộng mỗi cột */
+  gap: 15px;
+  overflow-x: auto;
+  overflow-y: hidden;
+        }
 
-    .counter-box {
-      background: white;
-      padding: 20px 28px;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-      width: 260px;
-    }
-
-    .icon {
-      font-size: 22px;
-      margin-bottom: 6px;
-    }
-
-    .label {
-      font-size: 14px;
-      color: #64748b;
-      margin-bottom: 4px;
-    }
-
-    .number {
-      font-size: 32px;
-      font-weight: bold;
-      color: #000;
-    }
-  </style>
+        
+    </style>
 </head>
 <body>
-
-  <div class="counter-box">
-    <div class="icon">📘</div>
-    <div class="label">Number of courses sold</div>
-    <div class="number" id="counter">0</div>
-  </div>
-
-  <script>
-    const counter = document.getElementById("counter");
-
-    const target = 100000;
-    const duration = 1500; // thời gian chạy (ms)
-    const stepTime = 20;
-    const steps = duration / stepTime;
-    const increment = target / steps;
-
-    let current = 0;
-
-    const timer = setInterval(() => {
-      current += increment;
-
-      if (current >= target) {
-        counter.textContent = "100,000+";
-        clearInterval(timer);
-      } else {
-        counter.textContent = Math.floor(current).toLocaleString();
-      }
-    }, stepTime);
-  </script>
-
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
 </body>
 </html>
