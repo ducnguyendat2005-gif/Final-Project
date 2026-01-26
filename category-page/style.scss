@@ -766,3 +766,341 @@ footer {
     height: 20px;
   }
 }
+/* Nest Hub (1024x600) - Landscape orientation */
+@media (min-width: 1024px) and (max-width: 1024px) and (min-height: 600px) and (max-height: 600px) {
+  header {
+    height: 60px;
+    padding: 0 20px;
+  }
+
+  .head-start {
+    width: 75%;
+    gap: 15px;
+  }
+
+  .head-start > p {
+    font-size: 13px;
+  }
+
+  .logo {
+    font-size: 14px;
+  }
+
+  .logo > img {
+    width: 25px;
+    height: 32px;
+  }
+
+  .search-container {
+    max-width: 300px;
+    height: 38px;
+  }
+
+  .func-bar {
+    gap: 15px;
+  }
+
+  .func-bar img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .ava-header {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .main-page {
+    padding: 0 30px 30px 30px;
+    gap: 20px;
+  }
+
+  .main-page .container h1 {
+    font-size: 24px;
+    margin-bottom: 6px;
+  }
+
+  .main-page .container .subtitle {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .main-page .container .controls {
+    margin-bottom: 20px;
+  }
+
+  .main-page .container .sidebar {
+    width: 220px;
+  }
+
+  .main-page .container .filter-section {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .main-page .container .filter-header h3 {
+    font-size: 14px;
+  }
+
+  .main-page .container .filter-option {
+    padding: 6px 0;
+  }
+
+  .main-page .container .filter-option label {
+    font-size: 13px;
+  }
+
+  .main-page .container .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .main-page .container .course-card {
+    max-width: 100%;
+  }
+
+  .main-page .container .course-image {
+    height: 130px;
+  }
+
+  .main-page .container .course-info {
+    padding: 12px;
+  }
+
+  .main-page .container .course-title {
+    font-size: 14px;
+  }
+
+  .main-page .container .course-author,
+  .main-page .container .course-rating,
+  .main-page .container .course-details {
+    font-size: 12px;
+  }
+
+  .main-page .container .course-price {
+    font-size: 16px;
+  }
+
+  .main-page .top-ins {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 40px 1fr;
+    grid-template-areas:
+      "title title lk"
+      "ins1 ins2 ins3";
+    gap: 15px;
+  }
+
+  .main-page .top-ins > p {
+    font-size: 20px;
+  }
+
+  .main-page .top-ins .ins1,
+  .main-page .top-ins .ins2,
+  .main-page .top-ins .ins3,
+  .main-page .top-ins .ins4,
+  .main-page .top-ins .ins5 {
+    width: 100%;
+    height: 240px;
+    padding: 18px 15px 8px 15px;
+  }
+
+  .main-page .top-ins .ins4,
+  .main-page .top-ins .ins5 {
+    display: none;
+  }
+
+  .main-page .top-cour {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 40px 1fr 1fr;
+    grid-template-areas:
+      "title lk"
+      "c1 c2"
+      "c3 c4";
+    gap: 15px;
+  }
+
+  .main-page .top-cour > p {
+    font-size: 18px;
+  }
+
+  .main-page .top-cour a {
+    font-size: 14px;
+  }
+
+  .main-page .top-cour .c1 > img,
+  .main-page .top-cour .c2 > img,
+  .main-page .top-cour .c3 > img,
+  .main-page .top-cour .c4 > img {
+    height: 120px;
+  }
+
+  .main-page .top-cour .c1 > p:nth-of-type(1),
+  .main-page .top-cour .c2 > p:nth-of-type(1),
+  .main-page .top-cour .c3 > p:nth-of-type(1),
+  .main-page .top-cour .c4 > p:nth-of-type(1) {
+    font-size: 16px;
+  }
+
+  .main-page .top-cour .c1 > p:nth-of-type(4),
+  .main-page .top-cour .c2 > p:nth-of-type(4),
+  .main-page .top-cour .c3 > p:nth-of-type(4),
+  .main-page .top-cour .c4 > p:nth-of-type(4) {
+    font-size: 20px;
+  }
+
+  footer {
+    height: 280px;
+    margin-top: 50px;
+  }
+
+  .footer-info {
+    padding: 40px;
+    gap: 40px;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  }
+
+  .footer-logo {
+    font-size: 18px;
+  }
+
+  .footer-intro > p,
+  .get-help > p,
+  .programs > p,
+  .contact-us > p {
+    font-size: 13px;
+  }
+
+  .get-help > p:nth-child(1),
+  .programs > p:nth-child(1),
+  .contact-us > p:nth-child(1) {
+    font-size: 18px;
+  }
+}
+
+/* iPad Pro (1024x1366) - Portrait orientation */
+@media (min-width: 1024px) and (max-width: 1024px) and (min-height: 1366px) {
+  header {
+    height: 70px;
+    padding: 0 40px;
+  }
+
+  .head-start {
+    width: 70%;
+  }
+
+  .search-container {
+    max-width: 400px;
+  }
+
+  .main-page {
+    padding: 0 40px 40px 40px;
+  }
+
+  .main-page .container h1 {
+    font-size: 28px;
+  }
+
+  .main-page .container .sidebar {
+    width: 240px;
+  }
+
+  .main-page .container .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .main-page .container .course-image {
+    height: 180px;
+  }
+
+  .main-page .top-ins {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 45px 1fr 1fr;
+    grid-template-areas:
+      "title title lk"
+      "ins1 ins2 ins3"
+      "ins4 ins5 ins5";
+    gap: 20px;
+  }
+
+  .main-page .top-ins .ins1,
+  .main-page .top-ins .ins2,
+  .main-page .top-ins .ins3,
+  .main-page .top-ins .ins4,
+  .main-page .top-ins .ins5 {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .main-page .top-ins .ins5 {
+    grid-column: span 1;
+  }
+
+  .main-page .top-cour {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 45px 1fr 1fr;
+    grid-template-areas:
+      "title lk"
+      "c1 c2"
+      "c3 c4";
+  }
+
+  footer {
+    height: 320px;
+  }
+
+  .footer-info {
+    padding: 60px;
+    gap: 60px;
+  }
+}
+
+/* General tablet adjustments (for both devices) */
+@media (min-width: 1024px) and (max-width: 1024px) {
+  .main-page .container .main-content {
+    gap: 25px;
+  }
+
+  .main-page .container .pagination {
+    margin-top: 30px;
+  }
+
+  .main-page .container .page-btn {
+    padding: 8px 12px;
+    min-width: 38px;
+  }
+
+  .filter-btn {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+
+  .sort-control select {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+}
+
+/* Additional responsive tweaks for better viewing */
+@media (max-width: 1024px) {
+  .main-page .container .grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+/* Ensure images scale properly */
+@media (max-width: 1024px) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .course-image img,
+  .main-page .top-cour .c1 > img,
+  .main-page .top-cour .c2 > img,
+  .main-page .top-cour .c3 > img,
+  .main-page .top-cour .c4 > img {
+    object-fit: cover;
+  }
+}
