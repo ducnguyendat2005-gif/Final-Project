@@ -5,6 +5,94 @@
   font-family: inter;
 }
 
+header {
+  width: 100%;
+  height: 75px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.head-start {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0px;
+}
+.head-start > p {
+  font-size: 15px;
+  font-weight: 250;
+}
+.logo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: inter;
+  font-weight: 500;
+  font-size: 16px;
+}
+.logo > img {
+  width: 31px;
+  height: 40px;
+}
+
+.search-container {
+  width: 100%;
+  max-width: 600px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.search-container img {
+  width: 16px;
+  height: 16px;
+  opacity: 0.6;
+}
+.search-container:focus-within {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.search-box {
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #111827;
+}
+.search-box::-moz-placeholder {
+  color: #9ca3af;
+}
+.search-box::placeholder {
+  color: #9ca3af;
+}
+
+.func-bar {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-right: -21px;
+}
+
+.ava {
+  width: 40px;
+  height: 40px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #334155;
+  border-radius: 50px;
+}
+
 .main-page {
   padding: 50px;
   display: grid;
@@ -246,7 +334,7 @@
   border: 1px solid #E5E7EB;
   border-radius: 16px;
   display: grid;
-  grid-template-columns: 32.5% 60%;
+  grid-template-columns: 40.5% 60%;
   grid-template-rows: auto auto 24%;
   grid-template-areas: "iup iup" "iac ub" "sb sb";
   gap: 20px;
@@ -398,4 +486,128 @@
 }
 .main-page .link-section .link-field1 input:focus, .main-page .link-section .link-field2 input:focus, .main-page .link-section .link-field3 input:focus, .main-page .link-section .link-field4 input:focus, .main-page .link-section .link-field5 input:focus {
   border-color: #3b82f6;
+}
+
+footer {
+  width: 100%;
+  height: 350px;
+  background-color: #1E293B;
+  position: relative;
+  margin-top: 70px;
+}
+
+.footer-info {
+  padding: 80px;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 2.2fr 0.8fr 0.8fr 1.5fr;
+  gap: 80px;
+  color: white;
+}
+
+.footer-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+.footer-intro > p {
+  font-weight: 200;
+  font-size: 14px;
+}
+.footer-intro > p:nth-of-type(1) {
+  padding-top: 15px;
+}
+.footer-intro > p:nth-of-type(2) {
+  padding-top: 4px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 20px;
+  gap: 6px;
+}
+
+.upper-p {
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.get-help {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.get-help > p:nth-child(1) {
+  font-size: 20px;
+  font-weight: 600;
+}
+.get-help > p:nth-child(2) {
+  margin-top: 3px;
+  font-size: 14px;
+  font-weight: 200;
+}
+.get-help > p:nth-child(3), .get-help > p:nth-child(4) {
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.programs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.programs > p:nth-child(1) {
+  font-size: 20px;
+  font-weight: 600;
+}
+.programs > p:nth-child(2) {
+  margin-top: 3px;
+  font-size: 14px;
+  font-weight: 200;
+}
+.programs > p:nth-child(3), .programs > p:nth-child(4), .programs > p:nth-child(5), .programs > p:nth-child(6) {
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-us {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-weight: 200;
+  font-size: 14px;
+}
+.contact-us > p:nth-child(1) {
+  font-weight: 700;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.partner-button {
+  display: flex;
+  gap: 10px;
+}
+
+.icon-btn {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+.icon-btn img {
+  width: 20px;
+  height: 20px;
 }/*# sourceMappingURL=style.css.map */

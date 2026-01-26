@@ -4,37 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        .box{
-            width:100px;
-            height:100px;
-            background-color: aquamarine;
-        }
-        .container {
-            display: grid;
-  grid-auto-flow: column; /* Quan trọng! */
-  grid-auto-columns: 200px; /* Chiều rộng mỗi cột */
-  gap: 15px;
-  overflow-x: auto;
-  overflow-y: hidden;
-        }
-
-        
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-    </div>
+    <div class="gauge-box">
+                    <svg viewBox="0 0 160 100">
+                        <path class="gauge-bg" d="M 20 80 A 60 60 0 0 1 140 80"></path>
+                        <path class="gauge-fill" d="M 20 80 A 60 60 0 0 1 140 80"></path>
+                        <circle class="gauge-center" cx="80" cy="80" r="4"></circle>
+                    </svg>
+                    <div class="percentage">87.6%</div>
+                    <div class="label">Completion rate of our courses</div>
+                </div>
+
 </body>
 </html>
